@@ -1,0 +1,81 @@
+import React, { createContext, useState, useEffect } from "react";
+
+export const AuthContext = createContext(null);
+
+export function AuthProvider({ children }) {
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const checkSession = async () => {
+            try {
+                const response = await fetch(
+                    `${import.meta.env.VITE_API_URL}/api/clients/me`,
+                    { credentials: "include" }
+                );
+
+                if (response.ok) {
+                    const data = await response.json();
+                    setUser(data.client);
+                }
+            } catch (error) {
+                console.error("Erreur vérification session:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        checkSession();
+    }, []);
+
+    const login = (userData) => {
+        setUser(userData);
+    };
+
+    const logout = async () => {
+        try {
+            await fetch(
+                `${import.meta.env.VITE_API_URL}/api/clients/logout`,
+                {
+                    method: "POST",
+                    credentials: "include"
+                }
+            );
+        } catch (error) {
+            console.error("Erreur lors de la déconnexion:", error);
+        }
+        setUser(null);
+    };
+
+    const deleteAccount = async () => {
+        const response = await fetch(
+            `${import.meta.env.VITE_API_URL}/api/clients/account`,
+            {
+                method: "DELETE",
+                credentials: "include"
+            }
+        );
+
+        if (!response.ok) {
+            const data = await response.json();
+            throw new Error(data.message || "Erreur lors de la suppression");
+        }
+
+        setUser(null);
+    };
+
+    const value = {
+        user,
+        login,
+        logout,
+        deleteAccount,
+        loading,
+        isAuthenticated: !!user,
+    };
+
+    return (
+        <AuthContext.Provider value={value}>
+            {children}
+        </AuthContext.Provider>
+    );
+}

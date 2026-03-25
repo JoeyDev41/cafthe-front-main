@@ -1,0 +1,1158 @@
+/* ============================================
+   CafThé - Pages diverses
+   Contient : engagements, à propos, vrac, footer,
+   erreurs/états, quickview, 404, pages légales
+   ============================================ */
+
+/* === ENGAGEMENTS (Qualité, Service, etc.) === */
+
+.engagements-section {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.engagements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.engagement-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--bg-card);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.engagement-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.engagement-card h4 {
+  margin-bottom: 0.5rem;
+  color: var(--text-heading);
+}
+
+.engagement-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* === ABOUT PAGE (À propos) === */
+
+.about-page {
+  background: var(--bg-section);
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-header {
+  text-align: center;
+}
+
+.about-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 0.5rem;
+}
+
+/* Carte hero "Notre histoire" */
+.about-hero-card {
+  background: var(--bg-panel);
+  border: 2px solid var(--border-strong);
+  border-radius: 6px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 6px var(--shadow-color);
+}
+
+.about-hero-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-hero-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--bg-element);
+  border: 1px solid var(--border-strong);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--text-subtle);
+}
+
+.about-hero-logo {
+  display: block;
+  height: 90px;
+  width: auto;
+  margin: 0 auto 0.75rem;
+}
+
+.about-quote {
+  font-style: italic;
+  color: var(--text-subtle);
+}
+
+/* Panneaux d'information (Histoire, Valeurs, Équipe) */
+.about-panel {
+  background: var(--bg-panel);
+  border: 2px solid var(--border-strong);
+  border-radius: 6px;
+  box-shadow: 0 2px 6px var(--shadow-color);
+  overflow: hidden;
+}
+
+.about-panel-title {
+  background: var(--bg-element);
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-strong);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.about-panel-body {
+  padding: 1.5rem;
+}
+
+/* Section histoire (texte + image) */
+.about-history {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.about-history-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.about-history-media img {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+/* Grille des valeurs */
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.about-value-card {
+  background: var(--bg-card-warm);
+  border: 1px solid var(--border-warm);
+  border-radius: 4px;
+  padding: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.about-value-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--bg-element);
+  border: 1px solid var(--border-strong);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--text-subtle);
+  flex-shrink: 0;
+}
+
+.about-value-card h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  color: var(--text-heading);
+}
+
+.about-value-card p {
+  font-size: 0.85rem;
+  color: var(--text-subtle);
+}
+
+/* Grille de l'équipe */
+.about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.about-team-card {
+  background: var(--bg-card-warm);
+  border: 1px solid var(--border-warm);
+  border-radius: 4px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.about-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent-brown);
+  border: 2px solid var(--btn-primary-bg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: var(--text-heading);
+  margin: 0 auto 0.6rem;
+}
+
+.about-team-card h3 {
+  margin-bottom: 0.2rem;
+  font-size: 1rem;
+  color: var(--text-heading);
+}
+
+.about-team-card p {
+  font-size: 0.85rem;
+  color: var(--text-subtle);
+}
+
+/* Bloc d'appel à l'action "Découvrir nos produits" */
+.about-cta {
+  background: var(--accent-warm);
+  border: 2px solid var(--accent-brown);
+  border-radius: 6px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--text-on-dark);
+  box-shadow: 0 2px 6px var(--shadow-medium);
+}
+
+.about-cta h2 {
+  color: var(--text-on-dark);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.about-cta-btn {
+  display: inline-block;
+  background: var(--bg-panel);
+  color: var(--text-heading);
+  border: 1px solid var(--accent-brown);
+  border-radius: 4px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 700;
+  transition: transform 0.15s, background-color 0.2s;
+}
+
+.about-cta-btn:hover {
+  background: var(--bg-card-warm);
+  transform: translateY(-1px);
+}
+
+/* === VRAC PAGE ===
+   Styles spécifiques aux produits en vrac (sélection poids)
+   ============================================ */
+
+.vrac-card-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--border-card);
+}
+
+.vrac-select {
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--border-medium);
+  border-radius: 4px;
+  background: var(--bg-card);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-heading);
+  cursor: pointer;
+}
+
+.vrac-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.vrac-price-kg {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+.vrac-added-msg {
+  color: var(--color-success);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0.3rem;
+}
+
+/* === FOOTER === */
+
+/* ============================
+   FOOTER PREMIUM
+   ============================ */
+
+.footer {
+  background-color: var(--bg-footer);
+  color: #c8b9a5;
+  margin-top: 4rem;
+  position: relative;
+}
+
+.footer-top-accent {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent-caramel), transparent);
+}
+
+/* --- Zone principale : brand + liens --- */
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.3fr 2fr;
+  gap: 3rem;
+  padding: 3rem 2rem 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* --- Brand (colonne gauche) --- */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-logo {
+  height: 90px;
+  width: auto;
+  opacity: 0.9;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.footer-logo:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+.footer-tagline {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--accent-caramel);
+  letter-spacing: 0.04em;
+  margin-top: 0.4rem;
+}
+
+.footer-description {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: #a89880;
+  max-width: 320px;
+}
+
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.footer-contact-info a {
+  font-size: 0.85rem;
+  color: #c8b9a5;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-contact-info a:hover {
+  color: var(--accent-caramel);
+}
+
+/* --- Grille de liens (colonne droite) --- */
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.footer-section h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-caramel);
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.6rem;
+}
+
+.footer-section h4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: var(--accent-caramel);
+  opacity: 0.5;
+}
+
+.footer-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.footer-section li,
+.footer-section a {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #a89880;
+  letter-spacing: 0.01em;
+  transition: color 0.2s, padding-left 0.2s;
+}
+
+.footer-section a:hover {
+  color: #fff;
+  padding-left: 4px;
+}
+
+/* --- Barre d'engagements --- */
+.footer-engagements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.4rem 2rem;
+  border-top: 1px solid rgba(168, 152, 128, 0.15);
+  border-bottom: 1px solid rgba(168, 152, 128, 0.15);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-engagement-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #c8b9a5;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.footer-engagement-icon {
+  font-size: 1.1rem;
+}
+
+.footer-divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(168, 152, 128, 0.3);
+}
+
+/* --- Bottom bar --- */
+.footer-bottom {
+  text-align: center;
+  padding: 1.4rem 2rem;
+  font-size: 0.8rem;
+  color: #7a6e60;
+}
+
+.footer-bottom p {
+  letter-spacing: 0.04em;
+}
+
+.footer-rgaa {
+  margin-top: 0.3rem;
+  font-size: 1.0rem;
+  color: #5e5448;
+  font-style: italic;
+}
+
+/* === ERREURS & ETATS === */
+
+.product-list-error {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+
+.error-container {
+  text-align: center;
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.error-container h3 {
+  margin-bottom: 0.5rem;
+}
+
+.retry-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.retry-button:hover {
+  background-color: var(--btn-primary-hover-bg);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.back-link {
+  color: var(--accent-brown);
+  font-weight: 600;
+}
+
+.back-link:hover {
+  color: var(--text-heading);
+}
+
+/* === QUICK VIEW MODAL ===
+   Modale qui affiche un aperçu rapide du produit.
+   Overlay sombre + contenu centré avec animation.
+   ============================================ */
+
+.quickview-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  animation: qv-fade-in 0.2s;
+}
+
+@keyframes qv-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.quickview-modal {
+  background: var(--bg-panel);
+  border-radius: 10px;
+  max-width: 750px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: qv-slide-up 0.25s;
+  border: solid 3px #a5742a;
+  box-shadow: 0 0 25px #a5742a
+
+}
+
+@keyframes qv-slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.quickview-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--accent-brown);
+  cursor: pointer;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.quickview-close:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.quickview-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.quickview-image {
+  border-radius: 10px 0 0 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.quickview-gallery {
+  position: relative;
+  flex: 1;
+  min-height: 250px;
+}
+
+.quickview-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.quickview-gallery .gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(44, 24, 16, 0.6);
+  color: var(--text-on-dark);
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  transition: background 0.2s;
+  opacity: 1;
+}
+
+.quickview-gallery .gallery-arrow:hover {
+  background: rgba(44, 24, 16, 0.85);
+}
+
+.quickview-gallery .gallery-arrow-left {
+  left: 8px;
+}
+
+.quickview-gallery .gallery-arrow-right {
+  right: 8px;
+}
+
+/* Points de navigation sous l'image */
+.quickview-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 0;
+  background: rgba(253, 248, 240, 0.8);
+}
+
+.quickview-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: #d4c5b0;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.quickview-dot.active {
+  background: var(--text-heading);
+  transform: scale(1.25);
+}
+
+.quickview-dot:hover {
+  background: var(--accent-brown);
+}
+
+/* Zone infos du quickview */
+.quickview-info {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.quickview-title {
+  font-size: 1.3rem;
+  color: var(--text-heading);
+  margin: 0.25rem 0;
+}
+
+.quickview-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.quickview-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin: 0.25rem 0;
+}
+
+/* Prix vrac dans la modale : prix principal + prix/kg en dessous */
+.vrac-price-modal {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.vrac-price-kg-modal {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+.quickview-stock {
+  font-size: 0.85rem;
+}
+
+.quickview-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.quickview-actions .quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.btn-quickview-add {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+}
+
+.quickview-details-link {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--accent-brown);
+  font-weight: 600;
+  border-top: 1px solid var(--border-card);
+}
+
+.quickview-details-link:hover {
+  color: var(--text-heading);
+}
+
+/* === PAGE 404 === */
+
+.notfound-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding: 3rem 2rem;
+  background-color: var(--bg-body);
+}
+
+.notfound-container {
+  text-align: center;
+  max-width: 500px;
+}
+
+.notfound-logo {
+  width: 120px;
+  margin: 0 auto 1rem;
+  opacity: 0.85;
+}
+
+.notfound-code {
+  font-family: "Montserrat", sans-serif;
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--accent-brown);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.notfound-title {
+  font-size: 1.5rem;
+  color: var(--text-heading);
+  margin-bottom: 1rem;
+}
+
+.notfound-text {
+  font-size: 1.05rem;
+  color: var(--accent-brown);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.notfound-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.notfound-actions .btn-primary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.notfound-actions .btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--accent-brown);
+  border-radius: 6px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.notfound-actions .btn-secondary:hover {
+  background-color: var(--accent-brown);
+  color: #fff;
+}
+
+/* === PAGES LEGALES (CGV, RGPD) === */
+
+.legal-page {
+  padding: 3rem 2rem 4rem;
+  background-color: var(--bg-body);
+  min-height: 60vh;
+}
+
+.legal-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.legal-container h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.legal-updated {
+  font-size: 0.85rem;
+  color: var(--accent-brown);
+  margin-bottom: 2.5rem;
+  font-style: italic;
+}
+
+.legal-section {
+  margin-bottom: 2rem;
+}
+
+.legal-section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--accent-brown);
+}
+
+.legal-section h3 {
+  font-size: 1.05rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.legal-section p {
+  margin-bottom: 0.6rem;
+  line-height: 1.7;
+}
+
+.legal-section ul {
+  margin: 0.5rem 0 1rem 1.5rem;
+  line-height: 1.8;
+}
+
+.legal-section li {
+  margin-bottom: 0.3rem;
+}
+
+.legal-section a {
+  color: var(--accent-brown);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.legal-section a:hover {
+  color: var(--text-heading);
+}
+
+/* Tableaux dans les pages légales */
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.legal-table th,
+.legal-table td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-medium);
+}
+
+.legal-table th {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.legal-table td {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.legal-table tr:nth-child(even) td {
+  background-color: var(--bg-hover);
+}
+
+/* === PAGE CONTACT === */
+
+.contact-page {
+  padding: 2.5rem 1.5rem 3rem;
+  background: var(--bg-section);
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-header {
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 0.5rem;
+}
+
+.contact-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* Grille : info + map en ligne, formulaire en dessous */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
+}
+
+.contact-info-panel  { grid-column: 1; grid-row: 1; }
+.contact-map-panel   { grid-column: 2; grid-row: 1; display: flex; flex-direction: column; }
+.contact-map-panel .contact-map-wrapper { flex: 1; }
+.contact-form-panel  { grid-column: 1 / -1; grid-row: 2; }
+
+/* Panel générique (même style que les panneaux .about-panel) */
+.contact-panel {
+  background: var(--bg-panel);
+  border: 2px solid var(--border-strong);
+  border-radius: 6px;
+  box-shadow: 0 2px 6px var(--shadow-color);
+  overflow: hidden;
+}
+
+.contact-panel-title {
+  background: var(--bg-element);
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-strong);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.contact-panel-body {
+  padding: 1.5rem;
+}
+
+/* Logo dans le bloc infos */
+.contact-logo {
+  display: block;
+  height: 70px;
+  width: auto;
+  margin: 0 auto 1.25rem;
+}
+
+/* Bloc infos boutique */
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.contact-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.contact-info-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-brown);
+}
+
+.contact-info-value {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-style: normal; /* neutralise le style par défaut de <address> */
+}
+
+.contact-info-value a {
+  color: var(--accent-brown);
+  font-weight: 600;
+}
+
+.contact-info-value a:hover {
+  color: var(--text-heading);
+}
+
+/* Horaires */
+.contact-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contact-hours > div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.contact-hours-closed {
+  color: var(--text-secondary);
+}
+
+/* Notice retrait en boutique */
+.contact-retrait-notice {
+  padding: 0.9rem;
+  background: var(--bg-card-warm);
+  border: 1px solid var(--border-warm);
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.contact-retrait-notice strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--text-heading);
+}
+
+.contact-retrait-notice p {
+  margin: 0;
+  color: var(--text-subtle);
+  line-height: 1.5;
+}
+
+/* Carte Google Maps */
+.contact-map-wrapper {
+  height: 100%;
+  min-height: 320px;
+}
+
+.contact-map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+/* Formulaire de contact */
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contact-textarea {
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--border-medium);
+  border-radius: 4px;
+  background: var(--bg-card);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-heading);
+  resize: vertical;
+  min-height: 120px;
+  box-sizing: border-box;
+}
+
+.contact-textarea:focus {
+  outline: none;
+  border-color: var(--accent-brown);
+  box-shadow: 0 0 0 2px rgba(139, 111, 71, 0.2);
+}
+
+.contact-submit-btn {
+  align-self: flex-start;
+  padding: 0.7rem 1.8rem;
+}
