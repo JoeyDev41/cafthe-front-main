@@ -28,7 +28,7 @@ export function CartProvider({ children }) {
         return product.isVrac ? product.vracId : product.ID_Article;
     };
 
-    const addToCart = (product, quantity = 1) => {
+    const addToCart = (product, quantity = 1) => { // Fonction pour ajouter un produit au panier
         setItems((prev) => {
             const key = getItemKey(product);
             const existing = prev.find((item) => getItemKey(item) === key);
@@ -44,7 +44,7 @@ export function CartProvider({ children }) {
         toast.success(`${product.nom_produit} ajouté au panier`);
     };
 
-    const updateQuantity = (itemKey, quantity) => {
+    const updateQuantity = (itemKey, quantity) => { // Fonction pour mettre à jour la quantité d'un produit dans le panier
         if (quantity <= 0) {
             removeFromCart(itemKey);
             return;
@@ -56,11 +56,11 @@ export function CartProvider({ children }) {
         );
     };
 
-    const removeFromCart = (itemKey) => {
+    const removeFromCart = (itemKey) => { // Fonction pour supprimer un produit du panier
         setItems((prev) => prev.filter((item) => getItemKey(item) !== itemKey));
     };
 
-    const clearCart = () => {
+    const clearCart = () => { // Fonction pour vider le panier
         setItems([]);
     };
 
